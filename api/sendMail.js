@@ -26,8 +26,8 @@ export default async function handler(req, res) {
         html: `<h1>Feedback Form</h1>
                 <p>Someone has trying reach you</p>
                 <p>This is his/her message:</p>
-                <p>${message}</p>
-                <p>from ${name}, email: ${email}</p>
+                <i>"${message}"</i>
+                <p>from: <b>${name}</b>, email: <b>${email}</b></p>
                 `,
       }),
     });
