@@ -9,7 +9,8 @@ export default async function handler(req, res) {
     const response = await fetch("https://smtp.maileroo.com/api/v2/emails", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.MAILEROO_API_KEY}`,
+        Authorization:
+          "Bearer 69a28928fa9f49a27ce0cde79b2a8f37befb06f2d016f33a0e644af272f2bbd0",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -22,6 +23,12 @@ export default async function handler(req, res) {
         },
         subject: subject || "Contact Form Submission",
         text: `${message}\n\nFrom: ${name}, ${email}`,
+        html: `<h1>Feedback Form</h1>
+                <p>Someone has trying reach you</p>
+                <p>This is his/her message:</p>
+                <p>${message}</p>
+                <p>from ${name}, email: ${email}</p>
+                `,
       }),
     });
 

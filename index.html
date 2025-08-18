@@ -363,7 +363,7 @@
       };
 
       try {
-        const res = await fetch("/api/sendMail", {
+        const res = await fetch("https://bloom-birth.vercel.app/api/sendMail", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
